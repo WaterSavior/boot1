@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class FirstController {
     @GetMapping("/hi")
     public String index(Model model){
-        model.addAttribute("name", "김보하");
+        model.addAttribute("name", "워싱보하우");
         return "index";
     }
 }
