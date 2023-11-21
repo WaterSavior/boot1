@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="kr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+</head>
+<body>
+<h1 th:text="${name} + '님, 이곳에 강림!'"></h1>
+<strong>당신의 취미는 -> </strong>
+<span th:each="item, iterStat: ${hobbies}">
+    <strong th:text="${item}"></strong>
+    <span th:unless="${iterStat.last}">
+        <strong>,</strong>
+    </span>
+</span>
+<strong>!!!!</strong>
+
+
+<br><br>
+
+<a th:each="item: ${dreams}">
+    <strong th:text="${item.age + '살의 당신이 되고 싶었던 것은 ' + item.wanted + '!!!' }"></strong><br>
+</a>
+</body>
+</html>
